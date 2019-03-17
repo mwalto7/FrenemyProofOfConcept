@@ -224,7 +224,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 40b5c8f9ff707402eb47707f406f1fe1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_JumpForce: 4000
+  m_JumpForce: 700
   m_CrouchSpeed: 0.36
   m_MovementSmoothing: 0.05
   m_AirControl: 1
@@ -236,7 +236,18 @@ MonoBehaviour:
   m_CrouchDisableCollider: {fileID: 0}
   OnLandEvent:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 799848061}
+        m_MethodName: OnLanding
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
   OnCrouchEvent:
@@ -384,7 +395,7 @@ PrefabInstance:
     - target: {fileID: 4887031615362022979, guid: b8cc5a3b37adc45b5b6e7db3821bbd73,
         type: 3}
       propertyPath: m_GravityScale
-      value: 2
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 2974901321377392477, guid: b8cc5a3b37adc45b5b6e7db3821bbd73,
         type: 3}
