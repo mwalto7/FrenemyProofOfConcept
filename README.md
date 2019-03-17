@@ -40,4 +40,7 @@ $ git commit -m "Your reason for making this change."
 
 # Finally, push your changes to GitHub
 $ git push
+
+# Or if it's your first time pushing
+$ git push -u origin <branch-name>
 ```
