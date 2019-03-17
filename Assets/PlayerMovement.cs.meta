@@ -1,9 +1,5 @@
 fileFormatVersion: 2
-<<<<<<< HEAD:Assets/Scipts/PlayerMovement.cs.meta
-guid: 8b48bfee9521f4a91b4ec3663bf0346a
-=======
-guid: a1dcb4b7169b34c93a1b1d20cc21c157
->>>>>>> master:Assets/Scipts/PlayerMovement.cs.meta
+guid: ba3f97ebfffda44f68516d11608a41c7
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
