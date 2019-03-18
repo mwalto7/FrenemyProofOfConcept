@@ -14,12 +14,6 @@ public class Gun : MonoBehaviour
     {
         //if parent is a player
         if (Weapon.transform.parent.tag == "Player"){
-
-            //drop/destroy the gun when a player presses 'E'
-            if (Input.GetKey(KeyCode.R)){
-                Debug.Log("R was pressed");
-                DestroyImmediate(Weapon);
-            }
             
             //left click shoots the gun when a player is holding it
             if(Input.GetMouseButtonDown(0)){
