@@ -12,8 +12,6 @@ public class PlayerMovement : MonoBehaviour
     float horizontalMove = 0f;
     bool jump = false;
     bool crouch = false;
-    bool nearWeapon = false;
-    bool hasWeapon = false;
 
     void Update()
     {
@@ -34,17 +32,6 @@ public class PlayerMovement : MonoBehaviour
         else if (Input.GetButtonUp("Crouch"))
         {
             crouch = false;
-        }
-
-        // if weapon = false && collide with weapon set weapon to true, set weapon component position
-        if (hasWeapon == false) {
-            
-        }
-
-        // if press e is pressed drop weapon and despawn
-        if (KeyCode.E && hasWeapon == true){
-            hasWeapon = false;
-            Destroy(Weapon);
         }
     }
 
