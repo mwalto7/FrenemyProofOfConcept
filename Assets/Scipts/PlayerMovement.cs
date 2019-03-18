@@ -12,7 +12,7 @@ public class PlayerMovement : MonoBehaviour
   float horizontalMove = 0f;
   bool jump = false;
   bool crouch = false;
-
+  bool facingRight;
 
   void Update()
   {
@@ -35,6 +35,7 @@ public class PlayerMovement : MonoBehaviour
       crouch = false;
     }
 
+    facingRight = Player.transform.localScale.x > 0;
   }
 
   void FixedUpdate()
@@ -50,7 +51,7 @@ public class PlayerMovement : MonoBehaviour
 
   public void OnCrouching(bool isCrouching)
   {
-    animator.SetBool("IsCrouching", isCrouching);
+    animator.SetBool("isCrouching", isCrouching);
   }
 
   void OnTriggerStay2D(Collider2D col)
@@ -81,35 +82,50 @@ public class PlayerMovement : MonoBehaviour
         {
           col.transform.localPosition = new Vector3(0.52f, -0.25f, 0);
         }
-      }
-    }
-    else if (Player.transform.childCount == 3)
-    {
-      if (Input.GetKey(KeyCode.E))
-      {
-        Player.transform.GetChild(2).gameObject.transform.parent = null;
-        col.transform.parent = Player.transform;
-        if (col.name == "SubMachineGun")
+        Debug.Log(facingRight);
+        if (!facingRight)
         {
-          col.transform.localPosition = new Vector3(0.195f, -0.161f, 0);
-        }
-        else if (col.name == "RocketLauncher")
-        {
-          col.transform.localPosition = new Vector3(-0.003f, -0.094f, 0);
-        }
-        else if (col.name == "Pistol")
-        {
-          col.transform.localPosition = new Vector3(0.368f, -0.14f, 0);
-        }
-        else if (col.name == "Grenade")
-        {
-          col.transform.localPosition = new Vector3(-0.2557f, -0.2155f, 0);
-        }
-        else if (col.name == "Knife")
-        {
-          col.transform.localPosition = new Vector3(0.52f, -0.25f, 0);
+          Vector3 scale = col.transform.localScale;
+          scale.x *= -1;
+          col.transform.localScale = scale;
         }
       }
+
     }
+    // else if (Player.transform.childCount == 3)
+    // {
+    //   if (Input.GetKey(KeyCode.E))
+    //   {
+    //     Player.transform.GetChild(2).gameObject.transform.parent = null;
+    //     col.transform.parent = Player.transform;
+    //     if (col.name == "SubMachineGun")
+    //     {
+    //       col.transform.localPosition = new Vector3(0.195f, -0.161f, 0);
+    //     }
+    //     else if (col.name == "RocketLauncher")
+    //     {
+    //       col.transform.localPosition = new Vector3(-0.003f, -0.094f, 0);
+    //     }
+    //     else if (col.name == "Pistol")
+    //     {
+    //       col.transform.localPosition = new Vector3(0.368f, -0.14f, 0);
+    //     }
+    //     else if (col.name == "Grenade")
+    //     {
+    //       col.transform.localPosition = new Vector3(-0.2557f, -0.2155f, 0);
+    //     }
+    //     else if (col.name == "Knife")
+    //     {
+    //       col.transform.localPosition = new Vector3(0.52f, -0.25f, 0);
+    //     }
+    //     Debug.Log(facingRight);
+    //     if (!facingRight)
+    //     {
+    //       Vector3 scale = col.transform.localScale;
+    //       scale.x *= -1;
+    //       col.transform.localScale = scale;
+    //     }
+    //}
+    //}
   }
 }
