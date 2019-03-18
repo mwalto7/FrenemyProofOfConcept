@@ -103,10 +103,10 @@ TextureImporter:
       name: Sci-Slide-Ani_0
       rect:
         serializedVersion: 2
-        x: 7
+        x: 0
         y: 0
-        width: 16
-        height: 22
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -114,7 +114,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: fbeb9cd213a9a43fabeea7390f014c42
+      spriteID: 94b3a62cab64345c29d8364cb25e4796
       vertices: []
       indices: 
       edges: []
@@ -123,10 +123,10 @@ TextureImporter:
       name: Sci-Slide-Ani_1
       rect:
         serializedVersion: 2
-        x: 34
+        x: 32
         y: 0
-        width: 24
-        height: 19
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -134,7 +134,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0d704fdcb0bc049f3a2eeec6fd51cb40
+      spriteID: 3f2f683c77c4841f293018cdee48af3f
       vertices: []
       indices: 
       edges: []
@@ -143,10 +143,10 @@ TextureImporter:
       name: Sci-Slide-Ani_2
       rect:
         serializedVersion: 2
-        x: 66
+        x: 64
         y: 0
-        width: 24
-        height: 18
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -154,7 +154,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7908b34a2eb724163972b43e8ced7146
+      spriteID: 633a8c51cea664da5b307a335f093411
       vertices: []
       indices: 
       edges: []
@@ -163,10 +163,10 @@ TextureImporter:
       name: Sci-Slide-Ani_3
       rect:
         serializedVersion: 2
-        x: 100
+        x: 96
         y: 0
-        width: 22
-        height: 18
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -174,7 +174,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: df1cff8c73d574498ae42acbb13880a2
+      spriteID: 664479a8b7f3240809796cb606ada438
       vertices: []
       indices: 
       edges: []
@@ -183,10 +183,10 @@ TextureImporter:
       name: Sci-Slide-Ani_4
       rect:
         serializedVersion: 2
-        x: 134
+        x: 128
         y: 0
-        width: 18
-        height: 20
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -194,7 +194,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ab333ed3c589543bdb482bbe2af51f53
+      spriteID: a878357f87d5441558d9b73181214154
       vertices: []
       indices: 
       edges: []

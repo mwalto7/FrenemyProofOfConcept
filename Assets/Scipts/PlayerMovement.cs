@@ -5,62 +5,127 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour
 {
 
-    public CharacterController2D controller;
-    public GameObject Weapon;
-    public Animator animator;
-    public float runSpeed = 40f;
-    float horizontalMove = 0f;
-    bool jump = false;
-    bool crouch = false;
-    bool nearWeapon = false;
-    bool hasWeapon = false;
+  public CharacterController2D controller;
+  public GameObject Player;
+  public Animator animator;
+  public float runSpeed = 40f;
+  float horizontalMove = 0f;
+  bool jump = false;
+  bool crouch = false;
+  bool facingRight;
 
-    void Update()
+  void Update()
+  {
+    horizontalMove = Input.GetAxisRaw("Horizontal") * runSpeed;
+
+    animator.SetFloat("Speed", Mathf.Abs(horizontalMove));
+
+    if (Input.GetButtonDown("Jump"))
     {
-        horizontalMove = Input.GetAxisRaw("Horizontal") * runSpeed;
+      jump = true;
+      animator.SetBool("IsJumping", true);
+    }
 
-        animator.SetFloat("Speed", Mathf.Abs(horizontalMove));
+    if (Input.GetButtonDown("Crouch"))
+    {
+      crouch = true;
+    }
+    else if (Input.GetButtonUp("Crouch"))
+    {
+      crouch = false;
+    }
 
-        if (Input.GetButtonDown("Jump"))
+    facingRight = Player.transform.localScale.x > 0;
+  }
+
+  void FixedUpdate()
+  {
+    controller.Move(horizontalMove * Time.fixedDeltaTime, crouch, jump);
+    jump = false;
+  }
+
+  public void OnLanding()
+  {
+    animator.SetBool("IsJumping", false);
+  }
+
+  public void OnCrouching(bool isCrouching)
+  {
+    animator.SetBool("isCrouching", isCrouching);
+  }
+
+  void OnTriggerStay2D(Collider2D col)
+  {
+    //when a player collides make weapon a child of the player if they dont already have a weapon
+    if (Player.transform.childCount == 2)
+    {
+      if (Input.GetKey(KeyCode.E))
+      {
+        col.transform.parent = Player.transform;
+        if (col.name == "SubMachineGun")
         {
-            jump = true;
-            animator.SetBool("IsJumping", true);
+          col.transform.localPosition = new Vector3(0.195f, -0.161f, 0);
         }
-
-        if (Input.GetButtonDown("Crouch"))
+        else if (col.name == "RocketLauncher")
         {
-            crouch = true;
-        } 
-        else if (Input.GetButtonUp("Crouch"))
+          col.transform.localPosition = new Vector3(-0.003f, -0.094f, 0);
+        }
+        else if (col.name == "Pistol")
         {
-            crouch = false;
+          col.transform.localPosition = new Vector3(0.368f, -0.14f, 0);
         }
-
-        // if weapon = false && collide with weapon set weapon to true, set weapon component position
-        if (hasWeapon == false) {
-            
+        else if (col.name == "Grenade")
+        {
+          col.transform.localPosition = new Vector3(-0.2557f, -0.2155f, 0);
         }
-
-        // if press e is pressed drop weapon and despawn
-        if (KeyCode.E && hasWeapon == true){
-            hasWeapon = false;
-            Destroy(Weapon);
+        else if (col.name == "Knife")
+        {
+          col.transform.localPosition = new Vector3(0.52f, -0.25f, 0);
         }
-    }
+        Debug.Log(facingRight);
+        if (!facingRight)
+        {
+          Vector3 scale = col.transform.localScale;
+          scale.x *= -1;
+          col.transform.localScale = scale;
+        }
+      }
 
-    void FixedUpdate()
-    {
-        controller.Move(horizontalMove * Time.fixedDeltaTime, crouch, jump);
-        jump = false;
     }
-
-    public void OnLanding() 
-    {
-        animator.SetBool("IsJumping", false);
-    }
-
-    public void OnCrouching(bool isCrouching)
-    {
-        animator.SetBool("IsCrouching", isCrouching);
-    }
+    // else if (Player.transform.childCount == 3)
+    // {
+    //   if (Input.GetKey(KeyCode.E))
+    //   {
+    //     Player.transform.GetChild(2).gameObject.transform.parent = null;
+    //     col.transform.parent = Player.transform;
+    //     if (col.name == "SubMachineGun")
+    //     {
+    //       col.transform.localPosition = new Vector3(0.195f, -0.161f, 0);
+    //     }
+    //     else if (col.name == "RocketLauncher")
+    //     {
+    //       col.transform.localPosition = new Vector3(-0.003f, -0.094f, 0);
+    //     }
+    //     else if (col.name == "Pistol")
+    //     {
+    //       col.transform.localPosition = new Vector3(0.368f, -0.14f, 0);
+    //     }
+    //     else if (col.name == "Grenade")
+    //     {
+    //       col.transform.localPosition = new Vector3(-0.2557f, -0.2155f, 0);
+    //     }
+    //     else if (col.name == "Knife")
+    //     {
+    //       col.transform.localPosition = new Vector3(0.52f, -0.25f, 0);
+    //     }
+    //     Debug.Log(facingRight);
+    //     if (!facingRight)
+    //     {
+    //       Vector3 scale = col.transform.localScale;
+    //       scale.x *= -1;
+    //       col.transform.localScale = scale;
+    //     }
+    //}
+    //}
+  }
 }
