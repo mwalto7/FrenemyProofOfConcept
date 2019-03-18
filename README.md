@@ -44,3 +44,13 @@ $ git push
 # Or if it's your first time pushing
 $ git push -u origin <branch-name>
 ```
+
+
+```
+git rm -r --cached .
+git add .
+git commit -m " "
+git pull
+git push
+git status
+```
