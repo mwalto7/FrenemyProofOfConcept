@@ -17,11 +17,10 @@ public class Gun : MonoBehaviour
     {
 
       //drop/destroy the gun when a player presses 'E'
-      if (Input.GetKey(KeyCode.E))
-      {
-        Debug.Log("e was pressed");
-        DestroyImmediate(Weapon);
-      }
+    //   if (Input.GetKey(KeyCode.E))
+    //   {
+    //     Debug.Log("e was pressed");
+    //   }
 
       //left click shoots the gun when a player is holding it
       if (Input.GetMouseButtonDown(0))

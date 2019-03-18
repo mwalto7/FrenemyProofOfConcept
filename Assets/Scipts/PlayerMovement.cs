@@ -53,26 +53,62 @@ public class PlayerMovement : MonoBehaviour
     animator.SetBool("IsCrouching", isCrouching);
   }
 
-  void OnTriggerEnter2D(Collider2D col)
+  void OnTriggerStay2D(Collider2D col)
   {
     //when a player collides make weapon a child of the player if they dont already have a weapon
     if (Player.transform.childCount == 2)
     {
-      col.transform.parent = Player.transform;
-      if(col.name == "SubMachineGun"){
+      if (Input.GetKey(KeyCode.E))
+      {
+        col.transform.parent = Player.transform;
+        if (col.name == "SubMachineGun")
+        {
           col.transform.localPosition = new Vector3(0.195f, -0.161f, 0);
-      }
-      else if(col.name == "RocketLauncher"){
+        }
+        else if (col.name == "RocketLauncher")
+        {
           col.transform.localPosition = new Vector3(-0.003f, -0.094f, 0);
+        }
+        else if (col.name == "Pistol")
+        {
+          col.transform.localPosition = new Vector3(0.368f, -0.14f, 0);
+        }
+        else if (col.name == "Grenade")
+        {
+          col.transform.localPosition = new Vector3(-0.2557f, -0.2155f, 0);
+        }
+        else if (col.name == "Knife")
+        {
+          col.transform.localPosition = new Vector3(0.52f, -0.25f, 0);
+        }
       }
-      else if (col.name == "Pistol"){
-        col.transform.localPosition = new Vector3(0.368f, -0.14f, 0);
-      }
-      else if (col.name == "Grenade"){
-        col.transform.localPosition = new Vector3(-0.2557f, -0.2155f, 0);
-      }
-      else if (col.name == "Knife"){
-        col.transform.localPosition = new Vector3(0.52f, -0.25f, 0);
+    }
+    else if (Player.transform.childCount == 3)
+    {
+      if (Input.GetKey(KeyCode.E))
+      {
+        Player.transform.GetChild(2).gameObject.transform.parent = null;
+        col.transform.parent = Player.transform;
+        if (col.name == "SubMachineGun")
+        {
+          col.transform.localPosition = new Vector3(0.195f, -0.161f, 0);
+        }
+        else if (col.name == "RocketLauncher")
+        {
+          col.transform.localPosition = new Vector3(-0.003f, -0.094f, 0);
+        }
+        else if (col.name == "Pistol")
+        {
+          col.transform.localPosition = new Vector3(0.368f, -0.14f, 0);
+        }
+        else if (col.name == "Grenade")
+        {
+          col.transform.localPosition = new Vector3(-0.2557f, -0.2155f, 0);
+        }
+        else if (col.name == "Knife")
+        {
+          col.transform.localPosition = new Vector3(0.52f, -0.25f, 0);
+        }
       }
     }
   }
