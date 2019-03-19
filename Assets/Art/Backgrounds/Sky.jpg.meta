@@ -1,17 +1,5 @@
 fileFormatVersion: 2
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-guid: aef9ba472fe2144b9bc34360f91eae51
-=======
-guid: ec853a8353bf248cca54841ec7da6442
->>>>>>> 3839a83d80d1832ec74c9f4c0bf2494125a11af7
-=======
-guid: ec853a8353bf248cca54841ec7da6442
->>>>>>> master
-=======
-guid: ddd20fe658b9d44cdb3a4f6a3c2b1edd
->>>>>>> assets
+guid: 19204d762802a47dea3c35d7683aa7a8
 TextureImporter:
   fileIDToRecycleName: {}
   externalObjects: {}
@@ -43,11 +31,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-<<<<<<< HEAD
-    filterMode: -1
-=======
     filterMode: 0
->>>>>>> assets
     aniso: -1
     mipBias: -100
     wrapU: 1
@@ -61,11 +45,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-<<<<<<< HEAD
-  spritePixelsToUnits: 100
-=======
   spritePixelsToUnits: 16
->>>>>>> assets
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -83,9 +63,6 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-<<<<<<< HEAD
-    textureCompression: 1
-=======
     textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
@@ -103,48 +80,13 @@ TextureImporter:
     allowsAlphaSplitting: 0
     overridden: 0
     androidETC2FallbackOverride: 0
-  - serializedVersion: 2
-    buildTarget: iPhone
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 0
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    androidETC2FallbackOverride: 0
-  - serializedVersion: 2
-    buildTarget: Android
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 0
->>>>>>> assets
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    androidETC2FallbackOverride: 0
   spriteSheet:
     serializedVersion: 2
     sprites: []
     outline: []
     physicsShape: []
     bones: []
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-    spriteID: 017d4d894fefe4daa9ac9623ff006dc4
-=======
-    spriteID: ba960b78d24d84c94b4a92f9b27a7023
->>>>>>> 3839a83d80d1832ec74c9f4c0bf2494125a11af7
-=======
-    spriteID: ba960b78d24d84c94b4a92f9b27a7023
->>>>>>> master
-=======
-    spriteID: 20eb357b191594164ad4b2c8f3cbc6b2
->>>>>>> assets
+    spriteID: 1a4cc56498f4e4a35945b7a70cfdc201
     vertices: []
     indices: 
     edges: []

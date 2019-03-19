@@ -13,6 +13,7 @@ public class PlayerMovement : MonoBehaviour
     bool jump = false;
     bool crouch = false;
     bool facingRight;
+    bool hasWeapon;
     public int playerNum;
     public static float health;
     public GameObject bulletRight, bulletLeft;
@@ -52,7 +53,7 @@ public class PlayerMovement : MonoBehaviour
         }
 
         //need to check if player is holding a weapon
-        if(Input.GetButtonDown("Fire p" + playerNum) && Time.time > nextFire)
+        if(hasWeapon && Input.GetButtonDown("Fire p"+playerNum) && Time.time > nextFire)
         {
             nextFire = Time.time + fireRate;
             fire();
@@ -88,13 +89,14 @@ public class PlayerMovement : MonoBehaviour
     void OnTriggerStay2D(Collider2D col)
     {
         //when a player collides make weapon a child of the player if they dont already have a weapon
-        if (Player.transform.childCount == 2)
+        if (Player.transform.childCount == 3)
         {
             if (Input.GetButtonDown("pickup weapon p" + playerNum))
             {
                 if (col.tag == "Weapon")
                 {
                     col.transform.parent = Player.transform;
+                    hasWeapon = true;
                     if (col.name == "SubMachineGun")
                     {
                         col.transform.localPosition = new Vector3(0.195f, -0.161f, 0);
@@ -125,14 +127,15 @@ public class PlayerMovement : MonoBehaviour
                 }
             }
         }
-        else if (Player.transform.childCount == 3)
+        else if (Player.transform.childCount == 4)
         {
             if (Input.GetButtonDown("pickup weapon p" + playerNum))
             {
                 if (col.tag == "Weapon")
                 {
                     col.transform.parent = Player.transform;
-                    if (Player.transform.childCount == 4)
+                    hasWeapon = true;
+                    if (Player.transform.childCount == 5)
                     {
                         Player.transform.GetChild(2).gameObject.transform.parent = null;
                     }
