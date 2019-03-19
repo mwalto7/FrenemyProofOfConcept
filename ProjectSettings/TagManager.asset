@@ -5,6 +5,8 @@ TagManager:
   serializedVersion: 2
   tags:
   - Death
+  - Weapon
+  - Bullet
   layers:
   - Default
   - TransparentFX

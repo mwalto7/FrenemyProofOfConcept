@@ -14,7 +14,7 @@ public class HealthBar : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        localScale.x = Player.health/150;
+        localScale.x = PlayerMovement.health/100;
         transform.localScale = localScale;
     }
 }
