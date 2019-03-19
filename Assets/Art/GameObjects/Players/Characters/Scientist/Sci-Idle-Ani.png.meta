@@ -89,10 +89,10 @@ TextureImporter:
       name: Sci-Idle-Ani_0
       rect:
         serializedVersion: 2
-        x: 7
+        x: 0
         y: 0
-        width: 16
-        height: 22
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -100,7 +100,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 700564fe8ecfc4e17bc14e860bebc56c
+      spriteID: ec54ea175939247e4a8c7a4cc45cd257
       vertices: []
       indices: 
       edges: []
@@ -109,10 +109,10 @@ TextureImporter:
       name: Sci-Idle-Ani_1
       rect:
         serializedVersion: 2
-        x: 39
+        x: 32
         y: 0
-        width: 16
-        height: 21
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -120,7 +120,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d3be5e004d47f43c4b9cf6d0f12c6b73
+      spriteID: 51c9615a70bf746eab58032e0abc03c2
       vertices: []
       indices: 
       edges: []
