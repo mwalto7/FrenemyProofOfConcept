@@ -141,7 +141,6 @@ public class CharacterController2D : MonoBehaviour
         //Vector3 theScale = transform.localScale;
         //theScale.x *= -1;
         //transform.localScale = theScale;
-        print("flipped character");
         transform.Rotate(0f, 180f, 0f);
     }
 

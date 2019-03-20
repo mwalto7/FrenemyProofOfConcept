@@ -719,7 +719,7 @@ CircleCollider2D:
   m_GameObject: {fileID: 799848059}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 24486b1f9384c49a2bdf7ee600abb4c9, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
@@ -852,6 +852,11 @@ PrefabInstance:
     - target: {fileID: 4887031615362022979, guid: b8cc5a3b37adc45b5b6e7db3821bbd73,
         type: 3}
       propertyPath: m_Simulated
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4887031615362022979, guid: b8cc5a3b37adc45b5b6e7db3821bbd73,
+        type: 3}
+      propertyPath: m_CollisionDetection
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2974901321377392477, guid: b8cc5a3b37adc45b5b6e7db3821bbd73,
@@ -1359,6 +1364,11 @@ PrefabInstance:
       propertyPath: m_Simulated
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4887031615362022979, guid: b8cc5a3b37adc45b5b6e7db3821bbd73,
+        type: 3}
+      propertyPath: m_CollisionDetection
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2974901321377392477, guid: b8cc5a3b37adc45b5b6e7db3821bbd73,
         type: 3}
       propertyPath: m_Offset.y
@@ -1409,6 +1419,11 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 2974901321377392477, guid: b8cc5a3b37adc45b5b6e7db3821bbd73,
+        type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 6200000, guid: 24486b1f9384c49a2bdf7ee600abb4c9, type: 2}
     - target: {fileID: 2931058274267796355, guid: b8cc5a3b37adc45b5b6e7db3821bbd73,
         type: 3}
       propertyPath: m_Sprite
@@ -1496,8 +1511,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1423804665}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.97, y: -5.62, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 1.92, y: 0.4, z: 0}
   m_LocalScale: {x: 0.16, y: 0.15, z: 1}
   m_Children:
   - {fileID: 689693064}

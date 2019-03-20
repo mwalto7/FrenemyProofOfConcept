@@ -7,12 +7,6 @@ public class Player : MonoBehaviour
 
     //PLAYERNUM needs to be updated in unity to reflect the actual player number
 
-    //public GameObject player1;
-    //public GameObject player2;
-    //public static float p1Health;
-    //public static float p2Health;
-
-    //public GameManagr gm;
 
     [SerializeField] private HealthBar healthBar; 
 
@@ -39,7 +33,6 @@ public class Player : MonoBehaviour
     {
         if(Input.GetButtonDown("pickup weapon Player " + playerNum))
         {
-            repeated = false;
             if(col.tag == "Weapon")
             {
                 if (!repeated)
@@ -73,9 +66,10 @@ public class Player : MonoBehaviour
                     if (children > 4)//we don't want more than one weapon at a time for now
                     {
                         print("somehow we got here");
-                        player.transform.GetChild(3).gameObject.transform.parent = null;//
+                        player.transform.GetChild(3).gameObject.transform.parent = null;
                     }
                     print("weapon facing: " + player.transform.GetChild(3).transform.right.x + ", facing right: " + facingRight);
+                    print(player.transform.GetChild(3).name);
                     if (player.transform.GetChild(3).transform.right.x > 0 && !facingRight)
                     {
                         if (!flippedWeapon)//for some reason the weapon was getting flipped twice so i had to use a bool to stop it
@@ -88,7 +82,6 @@ public class Player : MonoBehaviour
                 }
             }
         }
-        repeated = false;
     }
 
     public void Damage(float damage, GameObject target)
