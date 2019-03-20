@@ -72,6 +72,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3139961858122557848, guid: 41c03e3651d024a9eb04148a014f9f70,
+        type: 3}
+      propertyPath: m_Color.r
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3139961858122557848, guid: 41c03e3651d024a9eb04148a014f9f70,
+        type: 3}
+      propertyPath: m_Color.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3139961858122557848, guid: 41c03e3651d024a9eb04148a014f9f70,
+        type: 3}
+      propertyPath: m_Color.b
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3139961858122557849, guid: 41c03e3651d024a9eb04148a014f9f70,
         type: 3}
       propertyPath: m_CollisionDetection
@@ -85,7 +100,7 @@ PrefabInstance:
     - target: {fileID: 3139961858122557850, guid: 41c03e3651d024a9eb04148a014f9f70,
         type: 3}
       propertyPath: m_IsTrigger
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3139961858122557851, guid: 41c03e3651d024a9eb04148a014f9f70,
         type: 3}
