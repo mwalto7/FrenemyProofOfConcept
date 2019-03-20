@@ -39,63 +39,41 @@ public class Player : MonoBehaviour
     {
         if(Input.GetButtonDown("pickup weapon Player " + playerNum))
         {
+            repeated = false;
             if(col.tag == "Weapon")
             {
                 if (!repeated)
                 {
                     repeated = true;
                     int children = player.transform.childCount;
-                    if (children == 3)
+                    col.transform.parent = player.transform;//the collider's (or gun's) parent is now the player
+                    hasWeapon = true;
+                    if (col.name == "SubMachineGun")
                     {
-                        col.transform.parent = player.transform;//the collider's (or gun's) parent is now the player
-                        hasWeapon = true;
-                        if (col.name == "SubMachineGun")
-                        {
-                            col.transform.localPosition = new Vector3(0.195f, -0.161f, 0);
-                        }
-                        else if (col.name == "RocketLauncher")
-                        {
-                            col.transform.localPosition = new Vector3(-0.003f, -0.094f, 0);
-                        }
-                        else if (col.name == "Pistol")
-                        {
-                            col.transform.localPosition = new Vector3(0.368f, -0.14f, 0);
-                        }
-                        else if (col.name == "Grenade")
-                        {
-                            col.transform.localPosition = new Vector3(-0.2557f, -0.2155f, 0);
-                        }
-                        else if (col.name == "Knife")
-                        {
-                            col.transform.localPosition = new Vector3(0.52f, -0.25f, 0);
-                        }
+                        col.transform.localPosition = new Vector3(0.15f, -0.52f, 0);
                     }
-                    else if (children >= 4)//we don't want more than one weapon at a time for now
+                    else if (col.name == "RocketLauncher")
+                    {
+                        col.transform.localPosition = new Vector3(-0.003f, -0.094f, 0);
+                    }
+                    else if (col.name == "Pistol")
+                    {
+                        col.transform.localPosition = new Vector3(0.368f, -0.14f, 0);
+                    }
+                    else if (col.name == "Grenade")
+                    {
+                        col.transform.localPosition = new Vector3(-0.2557f, -0.2155f, 0);
+                    }
+                    else if (col.name == "Knife")
+                    {
+                        col.transform.localPosition = new Vector3(0.52f, -0.25f, 0);
+                    }
+
+                    // drop weapon if you have 2 guns
+                    if (children > 4)//we don't want more than one weapon at a time for now
                     {
                         print("somehow we got here");
-                        player.transform.GetChild(3).gameObject.transform.parent = null;
-                        col.transform.parent = player.transform;
-                        hasWeapon = true;
-                        if (col.name == "SubMachineGun")
-                        {
-                            col.transform.localPosition = new Vector3(0.195f, -0.161f, 0);
-                        }
-                        else if (col.name == "RocketLauncher")
-                        {
-                            col.transform.localPosition = new Vector3(-0.003f, -0.094f, 0);
-                        }
-                        else if (col.name == "Pistol")
-                        {
-                            col.transform.localPosition = new Vector3(0.368f, -0.14f, 0);
-                        }
-                        else if (col.name == "Grenade")
-                        {
-                            col.transform.localPosition = new Vector3(-0.2557f, -0.2155f, 0);
-                        }
-                        else if (col.name == "Knife")
-                        {
-                            col.transform.localPosition = new Vector3(0.52f, -0.25f, 0);
-                        }
+                        player.transform.GetChild(3).gameObject.transform.parent = null;//
                     }
                     print("weapon facing: " + player.transform.GetChild(3).transform.right.x + ", facing right: " + facingRight);
                     if (player.transform.GetChild(3).transform.right.x > 0 && !facingRight)
@@ -110,6 +88,7 @@ public class Player : MonoBehaviour
                 }
             }
         }
+        repeated = false;
     }
 
     public void Damage(float damage, GameObject target)
