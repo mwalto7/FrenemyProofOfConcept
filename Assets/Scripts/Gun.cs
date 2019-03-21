@@ -11,10 +11,16 @@ public class Gun : MonoBehaviour
 
     public GameObject bullet;
     string player;
+    public AudioClip shootsound;
+    public AudioSource source;
 
     private float fireRate = 0.3f;//.5f = 2 bullets per second, 1f = 1 bullet per second
     float nextFire = 0f;
     
+    void Awake(){
+        source = GetComponent<AudioSource>();
+    }
+
     // Update is called once per frame
     void Update()
     {
@@ -71,6 +77,7 @@ public class Gun : MonoBehaviour
     public void Shoot()
     {
         Instantiate(bulletPreFab, firePoint.position, firePoint.rotation);
+        source.PlayOneShot(shootsound);
         print("bang");
     }
 

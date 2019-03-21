@@ -33,6 +33,7 @@ public class Player : MonoBehaviour
     {
         if(Input.GetButtonDown("pickup weapon Player " + playerNum))
         {
+        repeated = false;
             if(col.tag == "Weapon")
             {
                 if (!repeated)
@@ -65,10 +66,10 @@ public class Player : MonoBehaviour
                     // drop weapon if you have 2 guns
                     if (children > 4)//we don't want more than one weapon at a time for now
                     {
-                        print("somehow we got here");
+                        print("2 guns");
                         player.transform.GetChild(3).gameObject.transform.parent = null;
                     }
-                    print("weapon facing: " + player.transform.GetChild(3).transform.right.x + ", facing right: " + facingRight);
+                    // print("weapon facing: " + player.transform.GetChild(3).transform.right.x + ", facing right: " + facingRight);
                     print(player.transform.GetChild(3).name);
                     if (player.transform.GetChild(3).transform.right.x > 0 && !facingRight)
                     {

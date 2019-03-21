@@ -16,6 +16,16 @@ public class PlayerMovement : MonoBehaviour
     bool crouch = false;
     public int playerNum;
 
+    public AudioClip jumpsound;
+    public AudioSource source;
+
+    Vector3 start;
+
+    void Awake(){
+        source = GetComponent<AudioSource>();
+        start = Player.transform.position;
+    }
+
     void Update()
     {
         horizontalMove = Input.GetAxisRaw("Horizontal Player " + playerNum) * runSpeed;
@@ -25,6 +35,7 @@ public class PlayerMovement : MonoBehaviour
         if (Input.GetButtonDown("Jump Player " + playerNum))
         {
             jump = true;
+            source.PlayOneShot(jumpsound);
             animator.SetBool("IsJumping", true);
         }
 
@@ -35,6 +46,13 @@ public class PlayerMovement : MonoBehaviour
         else if (Input.GetButtonUp("Crouch Player " + playerNum))
         {
             crouch = false;
+        }
+
+        if(Player.transform.position.y < -18f){
+            Player.transform.position = start;
+            if(Player.transform.childCount > 3){
+                Player.transform.GetChild(3).transform.parent = null;
+            }
         }
     }
 
