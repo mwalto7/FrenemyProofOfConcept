@@ -30,11 +30,14 @@ public class Bullet : MonoBehaviour
         if (!hasRegistered)
         {
             hasRegistered = true;
-            Destroy(gameObject);
-            Player player = collision.GetComponent<Player>();
-            if (player != null)
+            if(collision.transform.tag == "Player")
             {
-                player.Damage(damage, collision.gameObject);
+                Destroy(gameObject);
+                Player player = collision.GetComponent<Player>();
+                if (player != null)
+                {
+                    player.Damage(damage, collision.gameObject);
+                }
             }
         }
 
