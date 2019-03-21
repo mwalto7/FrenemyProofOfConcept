@@ -43,23 +43,23 @@ public class Player : MonoBehaviour
                     hasWeapon = true;
                     if (col.name == "SubMachineGun")
                     {
-                        col.transform.localPosition = new Vector3(0.15f, -0.52f, 0);
+                        col.transform.localPosition = new Vector3(0.08f, -0.55f, 0);
                     }
                     else if (col.name == "RocketLauncher")
                     {
-                        col.transform.localPosition = new Vector3(-0.003f, -0.094f, 0);
+                        col.transform.localPosition = new Vector3(0.245f, -0.43f, 0);
                     }
                     else if (col.name == "Pistol")
                     {
-                        col.transform.localPosition = new Vector3(0.368f, -0.14f, 0);
+                        col.transform.localPosition = new Vector3(0.368f, -0.46f, 0);
                     }
                     else if (col.name == "Grenade")
                     {
-                        col.transform.localPosition = new Vector3(-0.2557f, -0.2155f, 0);
+                        col.transform.localPosition = new Vector3(0.28f, -0.55f, 0);
                     }
                     else if (col.name == "Knife")
                     {
-                        col.transform.localPosition = new Vector3(0.52f, -0.25f, 0);
+                        col.transform.localPosition = new Vector3(0.64f, -0.56f, 0);
                     }
 
                     // drop weapon if you have 2 guns
