@@ -117,12 +117,12 @@ public class PlayerMovement : MonoBehaviour
                     {
                         col.transform.localPosition = new Vector3(0.52f, -0.25f, 0);
                     }
-                    if (Player.transform.GetChild(2).transform.localScale.x < 0 && !facingRight)
+                    if (Player.transform.GetChild(3).transform.localScale.x < 0 && !facingRight)
                     {
                         Debug.Log("flipping weapon");
-                        Vector3 scale = Player.transform.GetChild(2).transform.localScale;
+                        Vector3 scale = Player.transform.GetChild(3).transform.localScale;
                         scale.x *= -1;
-                        Player.transform.GetChild(2).transform.localScale = scale;
+                        Player.transform.GetChild(3).transform.localScale = scale;
                     }
                 }
             }
@@ -137,7 +137,7 @@ public class PlayerMovement : MonoBehaviour
                     hasWeapon = true;
                     if (Player.transform.childCount == 5)
                     {
-                        Player.transform.GetChild(2).gameObject.transform.parent = null;
+                        Player.transform.GetChild(3).gameObject.transform.parent = null;
                     }
                     if (col.name == "SubMachineGun")
                     {
@@ -159,12 +159,12 @@ public class PlayerMovement : MonoBehaviour
                     {
                         col.transform.localPosition = new Vector3(0.52f, -0.25f, 0);
                     }
-                    if (Player.transform.GetChild(2).transform.localScale.x < 0 && !facingRight)
+                    if (Player.transform.GetChild(3).transform.localScale.x < 0 && !facingRight)
                     {
                         Debug.Log("flipping weapon");
-                        Vector3 scale = Player.transform.GetChild(2).transform.localScale;
+                        Vector3 scale = Player.transform.GetChild(3).transform.localScale;
                         scale.x *= -1;
-                        Player.transform.GetChild(2).transform.localScale = scale;
+                        Player.transform.GetChild(3).transform.localScale = scale;
                     }
                 }
             }
