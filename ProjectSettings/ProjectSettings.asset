@@ -4,7 +4,7 @@
 PlayerSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 15
-  productGUID: 8affafaa2db544fffb26199502eb0661
+  productGUID: c3841c81462bda347b0aafbc9c2557c0
   AndroidProfiler: 0
   AndroidFilterTouchesWhenObscured: 0
   AndroidEnableSustainedPerformanceMode: 0
@@ -580,10 +580,10 @@ PlayerSettings:
   facebookXfbml: 0
   facebookFrictionlessRequests: 1
   apiCompatibilityLevel: 6
-  cloudProjectId: d9d902b9-18fd-4cc7-9fb3-0ecb5b0230f2
+  cloudProjectId: 
   framebufferDepthMemorylessMode: 0
-  projectName: Frenemy
-  organizationId: mwalto7
+  projectName: 
+  organizationId: 
   cloudEnabled: 0
   enableNativePlatformBackendsForNewInputSystem: 0
   disableOldInputManagerSupport: 0

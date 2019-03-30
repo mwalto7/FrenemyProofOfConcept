@@ -4,8 +4,10 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - Death
+  - Ground
   - Weapon
+  - Checker
+  - Platform
   - Bullet
   layers:
   - Default
@@ -16,11 +18,11 @@ TagManager:
   - UI
   - 
   - 
-  - 
-  - 
-  - 
-  - 
-  - 
+  - Platform
+  - Drop
+  - Weapon
+  - Ground
+  - Checker
   - 
   - 
   - 
@@ -43,4 +45,7 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Hp
+    uniqueID: 3497611203
     locked: 0
